@@ -91,6 +91,7 @@ https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#te
 
 ## Issues
 1. TypeError: WebDriver.__init__() got an unexpected keyword argument 'service_log_path'
-   1. Downgrading selenium from 4.10.0 to 4.9.0 helped
-   2. pip install selenium==4.9.0
+   1. known issue(Open): https://github.com/robotframework/SeleniumLibrary/issues/1835
+   2. Downgrading selenium from 4.10.0 to 4.9.0 helped
+   3. pip install selenium==4.9.0
 
