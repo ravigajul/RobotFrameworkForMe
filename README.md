@@ -89,4 +89,8 @@ https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#te
 1. .robot->SeleniumLibrary->Selenium(Chrome,Edge,Firefox)
 2. .robot->KeywordFile->PageObject->Library->Drivers->Execution
 
-## 
+## Issues
+1. TypeError: WebDriver.__init__() got an unexpected keyword argument 'service_log_path'
+   1. Downgrading selenium from 4.10.0 to 4.9.0 helped
+   2. pip install selenium==4.9.0
+
