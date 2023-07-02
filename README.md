@@ -56,3 +56,16 @@ All of these folders have plain text files ending with .robot extension
 1. Resources  
 2. Results  
 3. Tests  
+
+## Script Format
+.robot extension  
+2-4 Space or tabs seperated or pipe seperated  
+Keyword Driven   
+Natural Language   
+
+## Libraries
+1. Built-In
+2. External (SeleniumLibrary). Can be installed using pip install PackageName
+## Script Layers
+1. .robot->SeleniumLibrary->Selenium(Chrome,Edge,Firefox)
+2. .robot->KeywordFile->PageObject->Library->Drivers->Execution
