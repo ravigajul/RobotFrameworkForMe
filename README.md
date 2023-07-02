@@ -63,9 +63,30 @@ All of these folders have plain text files ending with .robot extension
 Keyword Driven   
 Natural Language   
 
+## Sections of the script file
+https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-data-sections
+1. Settings
+   1. Documentation
+   2. Library
+   3. Resource
+   4. Suite Setup/Suite TearDown
+   5. Test Setup/ Test TearDown
+   6. Test Timeout 5s
+2. Variables
+3. Test Cases
+   1. [Documentation]
+   2. [Tags]
+   3. [Timeout] 10s
+4. KeyWords
+5. Tasks (Related to RPA)
+6. Comments (Related to RPA)
+
 ## Libraries
 1. Built-In
 2. External (SeleniumLibrary). Can be installed using pip install PackageName
+
 ## Script Layers
 1. .robot->SeleniumLibrary->Selenium(Chrome,Edge,Firefox)
 2. .robot->KeywordFile->PageObject->Library->Drivers->Execution
+
+## 
