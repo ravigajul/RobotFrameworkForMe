@@ -89,6 +89,8 @@ https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#te
 1. .robot->SeleniumLibrary->Selenium(Chrome,Edge,Firefox)
 2. .robot->KeywordFile->PageObject->Library->Drivers->Execution
 
+##Locators
+id and name are the primary and default lcator
 ## Issues
 1. TypeError: WebDriver.__init__() got an unexpected keyword argument 'service_log_path'
    1. known issue(Open): https://github.com/robotframework/SeleniumLibrary/issues/1835
