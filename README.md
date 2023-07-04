@@ -11,7 +11,7 @@ Default location : C:\Users\ravi\AppData\Local\Programs\Python\Python311
 Disable Path Length Limit on the last step  
 Python -V //to check python version (capital V)   
 Pip -V //to check pip version  (Capital V)  
-python list //for upgrade directions  
+pip list //for upgrade directions  
 pip install --upgrade --no-cache-dir package1  
 
 ## Install Robot Framework & Selenium Library
@@ -89,7 +89,35 @@ https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#te
 1. .robot->SeleniumLibrary->Selenium(Chrome,Edge,Firefox)
 2. .robot->KeywordFile->PageObject->Library->Drivers->Execution
 
-##Locators
+## Command line Execution
+View-->Tool Windows->Terminal
+1. Here --include smoke is including smoke tags
+2. -d result is pointing to the result folder. It can be absolute path or any other path on the shared network
+3. -N to give a new name to the test report
+4. -t to execute a particular test case with its name in a given file
+5. -i to execute test cases based on the tag
+```pip 
+robot -d Results --include smoke Tests/MyScript.robot
+robot -d Results -i smoke Tests/MyScript.robot
+robot -d Results Tests/Mysript.robot
+robot -d c:\RobotResults\Results  Tests/Mysript.robot
+robot -N "New Name" -d Results -t "Should be able to login to the crm web application" Tests/CRM.robot
+
+```
+
+## Run from batch file
+```bat
+#@echo off
+cd "C:\development\RobotScripts\RobotFrameworkForMe\Tests"
+robot -d Results -v BROWSER:Chrome CRM.robot
+robot -d Results -v BROWSER:Edge CRM.robot
+pause
+```
+
+## IDE Execution
+
+
+
 id and name are the primary and default lcator
 ## Issues
 1. TypeError: WebDriver.__init__() got an unexpected keyword argument 'service_log_path'
