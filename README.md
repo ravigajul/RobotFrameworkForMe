@@ -102,7 +102,6 @@ robot -d Results -i smoke Tests/MyScript.robot
 robot -d Results Tests/Mysript.robot
 robot -d c:\RobotResults\Results  Tests/Mysript.robot
 robot -N "New Name" -d Results -t "Should be able to login to the crm web application" Tests/CRM.robot
-
 ```
 
 ## Run from batch file
@@ -114,11 +113,52 @@ robot -d Results -v BROWSER:Edge CRM.robot
 pause
 ```
 
-## IDE Execution
+## Resources
+1. Resources path is expected to be a fully qualified path (Absolute or Relative). Hence prefixed with ../ in the keyword-demo.robot
+2. Best practise is to prefix the Keywordfilename.step that we want to use in actual test case 
+
+## Variables
+### Scalar Variables
+To hold single value
+${Browser}  =     chrome
+${SuiteName}   =     Set variable  somesuite
+
+### List Variables
+To hold multiple values. Use '@' sign instead of '$' sign
+```pip
+@{intArray}         0  1  2
+@{strArray}         set variable    Ravi       Kumar       Gajul
+@{strArray}        create list    Gajul       Kumar       Ravi
+log ${intArray}[0]
+log ${intArray}[1]
+log ${intArray}[2]
+log ${strArray[3]
+```
+
+## Scope of variables
+Order of precedence 
+command > Script(Tests->*.robot) > Keywords(Resources>-*.robot)
+Pass variables through cmd
+Syntax: -v variablename:value
+```pip
+robot -d Results -v Browser:Edge Tests/keyword-demo.robot
+```
+
+## Passing Variables to Keywords
+1. The keywords step as below should be declared
+```pip
+Login to the application and maximize the browser
+    [Arguments]    ${URL}
+    go to          ${URL}
+```
+1. The Calling step should pass ${URL} as parameter. The url precedence is as explained in above step
+```pip
+Login to the application and maximize the browser   ${URL}
+```
+## SetUp & TearDown
 
 
-
-id and name are the primary and default lcator
+id and name are the primary and default locator
 ## Issues
 1. TypeError: WebDriver.__init__() got an unexpected keyword argument 'service_log_path'
    1. known issue(Open): https://github.com/robotframework/SeleniumLibrary/issues/1835
