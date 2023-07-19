@@ -155,8 +155,31 @@ Login to the application and maximize the browser
 ```pip
 Login to the application and maximize the browser   ${URL}
 ```
-## SetUp & TearDown
+## Pycharm Tips
+### Find Usages
+Right click on any keyword or variable and click Find usages. It shows all the files where the keyword or variable is being used.
+### TODO
+File->View->ToolWindows->TODO. 
+Any file containing #TODO will be displayed in this windows showing the active TODO Items
 
+## Command Line Options
+https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#using-command-line-options
+
+```robot
+# For setting results directory other than defaul
+robot -d results Tests\test.robot
+# For custom report and log title
+robot -d results --reporttitle "customReportTitle" --logtitle "CustomLogTitle" Tests\test.robot
+# Detailed logs
+robot -d results -L Debug --reporttitle "customReportTitle" --logtitle "CustomLogTitle" Tests\test.robot
+
+```
+
+## Variables
+https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#built-in-variables
+
+## Return Values
+https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#user-keyword-return-values
 
 id and name are the primary and default locator
 ## Issues
