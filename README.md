@@ -181,6 +181,21 @@ https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#bu
 ## Return Values
 https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#user-keyword-return-values
 
+## API Testing using RobotFramework
+Libraries required for Testing API 
+```Python
+python --version
+pip --version
+pip install robotframework-requests
+pip show robotframework-requests
+pip list
+pip check robotframework-requests
+```
+### GET
+
+### POST
+### PUT
+### DELETE
 id and name are the primary and default locator
 ## Issues
 1. TypeError: WebDriver.__init__() got an unexpected keyword argument 'service_log_path'
